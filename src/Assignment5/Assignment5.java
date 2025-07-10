@@ -8,9 +8,11 @@ public class Assignment5 {
 
         // /////////////////// Print Numbers From 1 To 10 ///////////////////
 
+        System.out.println("Numbers From 1 To 10: ");
         for (int i = 1 ; i <= 10 ; i++) {
-            System.out.println(i);
+            System.out.print(i + " ");
         }
+        System.out.println();
 
         // /////////////////// Evan Or Odd ///////////////////
 
@@ -51,12 +53,12 @@ public class Assignment5 {
                 System.out.println("Saturday");
                 break;
             default:
-                System.out.println("Invalid Day");
+                System.out.println("Invalid day number");
         }
 
         // /////////////////// Multiplication Table ///////////////////
 
-        System.out.print("Enter Number To Multiplication Table : ");
+        System.out.print("Enter a number to print its multiplication table: ");
 
         int num = inputScanner.nextInt();
         for (int z = 1 ; z <= 10 ; z++) {
@@ -65,11 +67,14 @@ public class Assignment5 {
 
         // /////////////////// Count Digits In A Number ///////////////////
 
-        System.out.print("Enter Numbers To Count Digits : ");
+        System.out.print("Enter a number to count its digits: ");
 
-        int digitNum = inputScanner.nextInt();
+        int digitNum = Math.abs(inputScanner.nextInt());
+
         int count = 0;
-
+        if (digitNum == 0){
+            count = 1;
+        }
         while (digitNum != 0) {
             digitNum /= 10;
             count++;
@@ -81,7 +86,7 @@ public class Assignment5 {
 
         System.out.print("Enter Numbers To Reverse It : ");
 
-        int reverseNum = inputScanner.nextInt();
+        int reverseNum = Math.abs(inputScanner.nextInt());
         int reversed = 0;
 
         while (reverseNum != 0) {
@@ -91,5 +96,7 @@ public class Assignment5 {
         }
 
         System.out.println("Reversed Number : " + reversed);
+
+        inputScanner.close();
     }
 }
