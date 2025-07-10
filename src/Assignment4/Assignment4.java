@@ -11,20 +11,10 @@ public class Assignment4 {
         votingEligibility.nextLine();
 
         System.out.print("Enter Your Nationality : ");
-        String userNationality = votingEligibility.nextLine().toLowerCase();
-        System.out.println(userNationality.substring(0, 1).toUpperCase());
-        System.out.println(userNationality.substring(1));
+        String nationality = votingEligibility.nextLine().trim().toLowerCase();
+        String formattedNationality = nationality.substring(0, 1).toUpperCase() + nationality.substring(1);
 
-        String firstCharacterUpper = userNationality.substring(0, 1).toUpperCase();
-        String restOfWordLower = userNationality.substring(1);
-
-        String AllWordUserNationality = firstCharacterUpper + restOfWordLower;
-
-        System.out.println(AllWordUserNationality);
-
-        String nationality = "Egyptian";
-
-        if (age >= 18 && AllWordUserNationality.equals(nationality)){
+        if (age >= 18 && formattedNationality.equals("Egyptian")){
             System.out.println("Eligible to vote");
         } else {
             System.out.println("Not Eligible");
