@@ -21,6 +21,10 @@ public class Assignment6 {
             for (int j = 0; j < 3; j++) {
                 System.out.print("Enter score " + (j + 1) + ": ");
                 scores[j] = inputUser.nextDouble();
+                while (scores[j] > 100 || scores[j] < 0){
+                    System.out.print("Please enter score in range from 0 to 100 : ");
+                    scores[j] = inputUser.nextDouble();
+                }
             }
 
             inputUser.nextLine();
